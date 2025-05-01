@@ -1,0 +1,93 @@
+@media print {
+  /* Hide elements not needed for printing */
+  button,
+  .no-print,
+  nav[aria-label="Table of Contents"] {
+    display: none !important;
+  }
+
+  /* Remove background colors and gradients */
+  body, 
+  .min-h-screen,
+  div[class*="bg-gradient"] {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Ensure text is visible on white background */
+  p, h1, h2, h3, h4, h5, h6, span, li {
+    color: black !important;
+  }
+
+  /* Adjust container width */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Add page breaks before major sections */
+  #pronunciation-guide,
+  #fun-facts-about-my-name,
+  #rozzi-family-history,
+  #email-catch-all {
+    page-break-before: always;
+  }
+
+  /* Ensure links show their URL */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-style: italic;
+  }
+
+  /* Improve readability */
+  p, li {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Adjust headings */
+  h1 {
+    font-size: 24pt !important;
+    margin-top: 1cm !important;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    margin-top: 0.8cm !important;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+  }
+
+  /* Add a header with page info */
+  @page {
+    margin: 2cm;
+  }
+
+  /* Add footer with page numbers */
+  @page {
+    @bottom-center {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+  }
+
+  /* Ensure images print properly */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Add a print-specific header */
+  body::before {
+    content: "Gavin Rozzi - Name Clarification";
+    display: block;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 1cm;
+  }
+}
