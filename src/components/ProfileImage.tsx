@@ -9,14 +9,19 @@ interface ProfileImageProps {
 const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, darkMode = false }) => {
   return (
     <div className="flex flex-col items-center mb-8">
-      <div className="w-[160px] h-[160px] rounded-full overflow-hidden shadow-md">
-        <img 
-          src={src} 
-          alt={alt} 
-          className="w-full h-full object-cover"
-        />
+      <div className="w-[164px] h-[164px] rounded-full p-[3px] bg-gradient-to-br from-orange-500 to-teal-500 shadow-md">
+        <div className="w-full h-full rounded-full overflow-hidden bg-white">
+          <img
+            src={src}
+            alt={alt}
+            width={400}
+            height={400}
+            loading="eager"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
-      <p className={`mt-3 text-center text-lg font-medium ${darkMode ? 'text-blue-300' : 'text-blue-600'}`}>Gavin Rozzi</p>
+      <p className={`mt-3 text-center text-lg font-medium ${darkMode ? 'text-orange-400' : 'text-orange-500'}`}>Gavin Rozzi</p>
     </div>
   );
 };

@@ -7,10 +7,10 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ darkMode = false }) => {
   return (
-    <div id="about-me" className={`my-8 ${darkMode ? 'bg-gradient-to-r from-gray-800 to-blue-900/50 border-gray-700' : 'bg-gradient-to-r from-slate-100 to-blue-50/50 border-slate-200'} p-7 rounded-lg border`}>
+    <div id="about-me" className={`my-8 ${darkMode ? 'bg-gradient-to-r from-zinc-800 to-zinc-700/50 border-zinc-700' : 'bg-gradient-to-r from-zinc-100 to-orange-50/30 border-zinc-200'} p-7 rounded-lg border`}>
       <div className="flex items-center mb-4">
-        <User className={`w-7 h-7 ${darkMode ? 'text-blue-300' : 'text-blue-600'} mr-3`} />
-        <h2 className={`text-3xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} group relative`}>
+        <User className={`w-7 h-7 ${darkMode ? 'text-orange-400' : 'text-orange-500'} mr-3`} />
+        <h2 className={`text-3xl font-bold ${darkMode ? 'text-zinc-100' : 'text-zinc-800'} group relative`}>
           <a href="#about-me" className="flex items-center">
             About Me
             <LinkIcon className="w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -19,28 +19,28 @@ const AboutMe: React.FC<AboutMeProps> = ({ darkMode = false }) => {
       </div>
       
       <div className={`prose ${darkMode ? 'prose-invert' : 'prose-slate'} max-w-none`}>
-        <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
+        <p className={`${darkMode ? 'text-zinc-300' : 'text-zinc-700'} leading-relaxed`}>
           Hi there! I'm a data scientist and public information specialist who's spent the last decade making complex data more accessible and useful. My work spans New Jersey state government, teaching at Rutgers University, and building civic technology tools that help people connect with their government. One of my proudest achievements is creating OPRAmachine, New Jersey's first automated public records platform that's helped thousands of citizens get the information they need.
         </p>
-        
-        <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mt-4`}>
+
+        <p className={`${darkMode ? 'text-zinc-300' : 'text-zinc-700'} leading-relaxed mt-4`}>
           Throughout my career, I've noticed a recurring theme – people often misspell my last name as "Rossi" instead of "Rozzi." It happens in emails, official documents, and even when I'm introduced at events. This website serves as both my professional home on the web and a friendly way to clear up this common confusion. So whether you're a colleague, student, or collaborator, now you'll know – it's Gavin Rozzi, with two Zs!
         </p>
-        
-        <div className={`${darkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-slate-200'} p-5 rounded-lg border mt-5`}>
-          <h3 className={`text-xl font-semibold ${darkMode ? 'text-blue-300' : 'text-blue-700'} mb-3`}>What I Do</h3>
+
+        <div className={`${darkMode ? 'bg-zinc-900 border-zinc-700' : 'bg-white border-zinc-200'} p-5 rounded-lg border mt-5`}>
+          <h3 className={`text-xl font-semibold ${darkMode ? 'text-orange-400' : 'text-orange-500'} mb-3`}>What I Do</h3>
           <ul className="space-y-2">
             <li className="flex items-start">
-              <Award className={`w-5 h-5 ${darkMode ? 'text-blue-300' : 'text-blue-500'} mr-2 mt-0.5 flex-shrink-0`} />
-              <span className={darkMode ? 'text-gray-300' : undefined}>Create data-driven solutions for public sector challenges</span>
+              <Award className={`w-5 h-5 ${darkMode ? 'text-teal-400' : 'text-teal-500'} mr-2 mt-0.5 flex-shrink-0`} />
+              <span className={darkMode ? 'text-zinc-300' : undefined}>Create data-driven solutions for public sector challenges</span>
             </li>
             <li className="flex items-start">
-              <Award className={`w-5 h-5 ${darkMode ? 'text-blue-300' : 'text-blue-500'} mr-2 mt-0.5 flex-shrink-0`} />
-              <span className={darkMode ? 'text-gray-300' : undefined}>Build tools that make government more transparent and accessible</span>
+              <Award className={`w-5 h-5 ${darkMode ? 'text-teal-400' : 'text-teal-500'} mr-2 mt-0.5 flex-shrink-0`} />
+              <span className={darkMode ? 'text-zinc-300' : undefined}>Build tools that make government more transparent and accessible</span>
             </li>
             <li className="flex items-start">
-              <Award className={`w-5 h-5 ${darkMode ? 'text-blue-300' : 'text-blue-500'} mr-2 mt-0.5 flex-shrink-0`} />
-              <span className={darkMode ? 'text-gray-300' : undefined}>Design information systems that connect people with public data</span>
+              <Award className={`w-5 h-5 ${darkMode ? 'text-teal-400' : 'text-teal-500'} mr-2 mt-0.5 flex-shrink-0`} />
+              <span className={darkMode ? 'text-zinc-300' : undefined}>Design information systems that connect people with public data</span>
             </li>
           </ul>
         </div>

@@ -21,14 +21,14 @@ const Header: React.FC<HeaderProps> = ({ darkMode = false }) => {
   const hideTooltip = useCallback(() => setIsTooltipVisible(false), []);
 
   return (
-    <header 
-      className="bg-gradient-to-r from-indigo-800 to-blue-700 py-8 md:py-10 px-4 md:px-6 text-center relative overflow-hidden"
+    <header
+      className="bg-gradient-to-r from-orange-500 to-teal-500 py-8 md:py-10 px-4 md:px-6 text-center relative overflow-hidden"
       role="banner"
     >
       {/* Decorative elements - with aria-hidden for screen readers */}
       <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 left-1/4 w-24 h-24 rounded-full bg-white blur-xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-32 h-32 rounded-full bg-blue-300 blur-xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-32 h-32 rounded-full bg-teal-300 blur-xl"></div>
       </div>
       
       <div className="relative z-10">
@@ -43,13 +43,13 @@ const Header: React.FC<HeaderProps> = ({ darkMode = false }) => {
             role="button"
             aria-describedby="name-pronunciation"
           >
-            <span className="underline decoration-2 decoration-blue-300 hover:decoration-white transition-colors">Gavin Rozzi</span>
+            <span className="underline decoration-2 decoration-orange-200 hover:decoration-white transition-colors">Gavin Rozzi</span>
             
             {/* Tooltip */}
             {isTooltipVisible && (
               <div 
                 id="name-pronunciation"
-                className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-white text-blue-800 text-sm px-3 py-2 rounded shadow-lg w-max max-w-xs z-10 pointer-events-none"
+                className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-white text-zinc-800 text-sm px-3 py-2 rounded shadow-lg w-max max-w-xs z-10 pointer-events-none"
                 role="tooltip"
               >
                 Pronounced: <strong>RAH-zee</strong> (not ROH-see)
@@ -59,8 +59,8 @@ const Header: React.FC<HeaderProps> = ({ darkMode = false }) => {
           </span>?
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl font-semibold text-blue-50 max-w-3xl mx-auto whitespace-normal mb-4">
-          There is <span className="underline decoration-2 decoration-red-300">no person</span> named "Gavin Rossi" - my last name is spelled with <span className="inline-block bg-blue-600 px-1.5 py-0.5 rounded">two Zs</span>
+        <p className="text-base sm:text-lg md:text-xl font-semibold text-white/90 max-w-3xl mx-auto whitespace-normal mb-4">
+          There is <span className="underline decoration-2 decoration-red-300">no person</span> named "Gavin Rossi" - my last name is spelled with <span className="inline-block bg-zinc-800/40 px-1.5 py-0.5 rounded">two Zs</span>
         </p>
         
         {/* Action buttons */}
@@ -75,9 +75,9 @@ const Header: React.FC<HeaderProps> = ({ darkMode = false }) => {
             <ChevronDown className="w-4 h-4 ml-2 animate-bounce" />
           </button>
           
-          <a 
-            href="https://gavinrozzi.com" 
-            className="inline-flex items-center justify-center px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+          <a
+            href="https://gavinrozzi.com"
+            className="inline-flex items-center justify-center px-5 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Gavin Rozzi's official website"

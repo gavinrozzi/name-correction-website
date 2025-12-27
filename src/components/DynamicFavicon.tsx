@@ -23,9 +23,9 @@ const DynamicFavicon: React.FC<DynamicFaviconProps> = ({ initials, darkMode }) =
       gradient.setAttribute('x2', '100%');
       gradient.setAttribute('y2', '100%');
 
-      // Set gradient colors based on dark mode
-      const startColor = darkMode ? '#1e40af' : '#3b82f6';
-      const endColor = darkMode ? '#0f172a' : '#1e40af';
+      // Set gradient colors - orange to teal (matching GavinRozzi.com branding)
+      const startColor = '#f97316'; // orange-500
+      const endColor = '#14b8a6';   // teal-500
 
       const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
       stop1.setAttribute('offset', '0%');
