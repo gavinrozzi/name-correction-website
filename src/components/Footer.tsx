@@ -1,5 +1,4 @@
 import React from 'react';
-import ObfuscatedEmail from './ObfuscatedEmail';
 
 interface FooterProps {
   darkMode?: boolean;
@@ -12,11 +11,12 @@ const Footer: React.FC<FooterProps> = ({ darkMode = false }) => {
         <p>© {new Date().getFullYear()} Gavin Rozzi. All rights reserved.</p>
         <p className="mt-2 flex items-center justify-center">
           <span className="mr-1">Contact:</span>
-          <ObfuscatedEmail
-            username="gr"
-            domain="gavinrozzi.com"
-            className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-500 hover:text-orange-600'} inline-flex items-center`}
-          />
+          <a
+            href="https://www.gavinrozzi.com/contact"
+            className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-500 hover:text-orange-600'}`}
+          >
+            gavinrozzi.com/contact
+          </a>
         </p>
       </div>
     </div>

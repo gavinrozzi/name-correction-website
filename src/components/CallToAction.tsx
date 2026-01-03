@@ -1,6 +1,5 @@
 import React from 'react';
 import { Home, Mail } from 'lucide-react';
-import ObfuscatedEmail from './ObfuscatedEmail';
 
 interface CallToActionProps {
   darkMode?: boolean;
@@ -17,17 +16,13 @@ const CallToAction: React.FC<CallToActionProps> = ({ darkMode = false }) => {
         Visit My Website
       </a>
 
-      <ObfuscatedEmail
-        username="gr"
-        domain="gavinrozzi.com"
+      <a
+        href="https://www.gavinrozzi.com/contact"
         className={`inline-flex items-center justify-center px-6 py-4 border ${darkMode ? 'border-zinc-600 text-orange-300 bg-zinc-800 hover:bg-zinc-700' : 'border-orange-300 text-orange-600 bg-white hover:bg-orange-50'} text-base font-medium rounded-lg transition-colors shadow-sm`}
-        linkText={
-          <span className="inline-flex items-center">
-            <Mail className="w-5 h-5 mr-3" />
-            Email Me
-          </span>
-        }
-      />
+      >
+        <Mail className="w-5 h-5 mr-3" />
+        Contact Me
+      </a>
     </div>
   );
 };
