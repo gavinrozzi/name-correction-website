@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Twitter } from 'lucide-react';
+import { Linkedin, Twitter, Github } from 'lucide-react';
 
 interface SocialLinksProps {
   darkMode?: boolean;
@@ -27,6 +27,15 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ darkMode = false }) => {
           aria-label="X (Twitter) Profile"
         >
           <Twitter className="w-6 h-6" />
+        </a>
+        <a
+          href="https://github.com/gavinrozzi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center p-4 rounded-full bg-gradient-to-r from-zinc-700 to-zinc-800 text-white hover:from-zinc-800 hover:to-zinc-900 transition-colors shadow-sm"
+          aria-label="GitHub Profile"
+        >
+          <Github className="w-6 h-6" />
         </a>
       </div>
     </div>

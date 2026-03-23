@@ -56,7 +56,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         "name": "Who is Gavin Rozzi?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Gavin Rozzi is a data scientist and public information specialist from New Jersey. He teaches at Rutgers University and created OPRAmachine, New Jersey's first automated public records platform. His work focuses on making government data more accessible and transparent."
+          "text": "Gavin Rozzi is a civic technologist and Director of the DHCR Data Center at the New Jersey Department of Community Affairs. He founded OPRAmachine, New Jersey's first statewide freedom of information platform, and created zipcodeR, an open-source R package cited 53+ times in academic research. He serves on the board of the NJ Foundation for Open Government."
         }
       }
     ]
@@ -91,13 +91,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "url": "https://gavinrozzi.com",
     "sameAs": [
       "https://twitter.com/gavroz",
-      "https://linkedin.com/in/gavinrozzi",
-      "https://github.com/gavinrozzi"
+      "https://www.linkedin.com/in/gavin-rozzi/",
+      "https://github.com/gavinrozzi",
+      "https://scholar.google.com/citations?user=slj82AIAAAAJ",
+      "https://orcid.org/0000-0002-9969-8175"
     ],
-    "jobTitle": "Data Scientist",
+    "jobTitle": "Director, DHCR Data Center",
     "worksFor": {
-      "@type": "Organization",
-      "name": "Rutgers University"
+      "@type": "GovernmentOrganization",
+      "name": "New Jersey Department of Community Affairs"
     }
   };
 

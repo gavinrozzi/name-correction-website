@@ -4,45 +4,59 @@
 
 // Define common URL patterns from gavinrozzi.com
 const URL_PATTERNS = [
-  { 
-    pattern: /\/post\/([a-z0-9-]+)\/?$/i, 
+  {
+    pattern: /\/blog\/([a-z0-9-]+)\/?$/i,
     type: 'blog post',
-    example: '/post/section-230-isnt-just-about-big-tech/'
+    example: '/blog/digital-transformation-government/'
   },
-  { 
-    pattern: /\/project\/([a-z0-9-]+)\/?$/i, 
+  {
+    pattern: /\/post\/([a-z0-9-]+)\/?$/i,
+    type: 'blog post',
+    example: '/post/section-230-isnt-just-about-big-tech/',
+    redirect: '/blog/'
+  },
+  {
+    pattern: /\/portfolio\/([a-z0-9-]+)\/?$/i,
     type: 'project',
-    example: '/project/opramachine/'
+    example: '/portfolio/opramachine/'
   },
-  { 
-    pattern: /\/tag\/([a-z0-9-]+)\/?$/i, 
-    type: 'tag',
-    example: '/tag/data-visualization/'
+  {
+    pattern: /\/project\/([a-z0-9-]+)\/?$/i,
+    type: 'project',
+    example: '/project/opramachine/',
+    redirect: '/portfolio/'
   },
-  { 
-    pattern: /\/publication\/([a-z0-9-]+)\/?$/i, 
+  {
+    pattern: /\/media\/([a-z0-9-]+)\/?$/i,
+    type: 'media appearance',
+    example: '/media/civic-tech-podcast/'
+  },
+  {
+    pattern: /\/publications\/([a-z0-9-]+)\/?$/i,
     type: 'publication',
-    example: '/publication/opramachine-data-paper/'
+    example: '/publications/zipcoder-software-paper/'
   },
-  { 
-    pattern: /\/talk\/([a-z0-9-]+)\/?$/i, 
+  {
+    pattern: /\/publication\/([a-z0-9-]+)\/?$/i,
+    type: 'publication',
+    example: '/publication/opramachine-data-paper/',
+    redirect: '/publications/'
+  },
+  {
+    pattern: /\/talk\/([a-z0-9-]+)\/?$/i,
     type: 'talk',
-    example: '/talk/using-data-and-emerging-technologies-to-improve-urban-life/'
+    example: '/talk/using-data-and-emerging-technologies-to-improve-urban-life/',
+    redirect: '/media/'
   },
-  { 
-    pattern: /\/authors\/([a-z0-9-]+)\/?$/i, 
-    type: 'author page',
-    example: '/authors/gavin/'
+  {
+    pattern: /\/about\/?$/i,
+    type: 'about page',
+    example: '/about/'
   },
-  { 
-    pattern: /\/publication-type\/([0-9]+)\/?$/i, 
-    type: 'publication type',
-    example: '/publication-type/1/'
-  },
-  { 
-    pattern: /\/slides\/([a-z0-9-]+)\/?$/i, 
-    type: 'slides',
-    example: '/slides/opiatecrisis/'
+  {
+    pattern: /\/contact\/?$/i,
+    type: 'contact page',
+    example: '/contact/'
   }
 ];
 
@@ -78,24 +92,37 @@ export function analyzePath(path: string): {
   
   // If we have segments, check if any of them match known content types
   if (segments.length > 0) {
-    const knownContentTypes = ['post', 'project', 'tag', 'publication', 'talk', 'authors', 'slides'];
-    
-    if (knownContentTypes.includes(segments[0])) {
+    const knownContentTypes = ['blog', 'portfolio', 'media', 'publications', 'about', 'contact', 'speaking'];
+    // Map old content types to new ones
+    const contentTypeRedirects: Record<string, string> = {
+      'post': 'blog',
+      'project': 'portfolio',
+      'publication': 'publications',
+      'talk': 'media'
+    };
+
+    const firstSegment = segments[0];
+    const mappedType = contentTypeRedirects[firstSegment] || firstSegment;
+
+    if (knownContentTypes.includes(mappedType)) {
       // This is likely a content path with the correct structure
+      const newPath = contentTypeRedirects[firstSegment]
+        ? normalizedPath.replace(firstSegment, contentTypeRedirects[firstSegment])
+        : normalizedPath;
       return {
-        suggestedUrl: `https://www.gavinrozzi.com/${normalizedPath}`,
-        contentType: segments[0],
+        suggestedUrl: `https://www.gavinrozzi.com/${newPath}`,
+        contentType: mappedType,
         confidence: 'medium'
       };
     }
-    
+
     // Check if any segment looks like a slug (contains hyphens, lowercase)
     const possibleSlug = segments.find(segment => /^[a-z0-9-]+$/.test(segment) && segment.includes('-'));
-    
+
     if (possibleSlug) {
       // This might be a content slug, suggest as a blog post (most common)
       return {
-        suggestedUrl: `https://www.gavinrozzi.com/post/${possibleSlug}`,
+        suggestedUrl: `https://www.gavinrozzi.com/blog/${possibleSlug}/`,
         contentType: 'blog post',
         confidence: 'low'
       };
@@ -127,28 +154,43 @@ export function getRelatedContentSuggestions(path: string): Array<{
   // Map of keywords to relevant content
   const keywordContentMap: Record<string, Array<{url: string; title: string; type: string}>> = {
     'opra': [
-      { url: 'https://www.gavinrozzi.com/project/opramachine/', title: 'OPRAmachine', type: 'project' },
-      { url: 'https://www.gavinrozzi.com/tag/opra/', title: 'OPRA Content', type: 'tag' },
-      { url: 'https://www.gavinrozzi.com/post/om-1-year-later/', title: 'OPRAmachine: One Year Later', type: 'blog post' }
+      { url: 'https://www.gavinrozzi.com/portfolio/opramachine/', title: 'OPRAmachine', type: 'project' },
+      { url: 'https://www.gavinrozzi.com/opramachine/', title: 'OPRAmachine Overview', type: 'page' }
+    ],
+    'zipcoder': [
+      { url: 'https://www.gavinrozzi.com/portfolio/zipcoder/', title: 'zipcodeR Package', type: 'project' },
+      { url: 'https://www.gavinrozzi.com/zipcoder/', title: 'zipcodeR Overview', type: 'page' },
+      { url: 'https://www.gavinrozzi.com/r-packages/', title: 'R Packages', type: 'page' }
     ],
     'data': [
-      { url: 'https://www.gavinrozzi.com/tag/data/', title: 'Data Content', type: 'tag' },
-      { url: 'https://www.gavinrozzi.com/tag/data-visualization/', title: 'Data Visualization', type: 'tag' }
+      { url: 'https://www.gavinrozzi.com/portfolio/', title: 'Portfolio', type: 'projects' },
+      { url: 'https://www.gavinrozzi.com/blog/data-visualization-public-policy/', title: 'Data Visualization', type: 'blog post' }
     ],
-    'politics': [
-      { url: 'https://www.gavinrozzi.com/tag/politics/', title: 'Politics Content', type: 'tag' },
-      { url: 'https://www.gavinrozzi.com/tag/nj-politics/', title: 'NJ Politics', type: 'tag' }
+    'government': [
+      { url: 'https://www.gavinrozzi.com/gavin-rozzi-nj-government/', title: 'NJ Government Work', type: 'page' },
+      { url: 'https://www.gavinrozzi.com/portfolio/', title: 'Government Projects', type: 'projects' }
     ],
     'tech': [
-      { url: 'https://www.gavinrozzi.com/tag/civic-tech/', title: 'Civic Tech', type: 'tag' },
-      { url: 'https://www.gavinrozzi.com/project/', title: 'Tech Projects', type: 'projects' }
+      { url: 'https://www.gavinrozzi.com/portfolio/', title: 'Tech Projects', type: 'projects' },
+      { url: 'https://www.gavinrozzi.com/blog/digital-transformation-government/', title: 'Digital Transformation', type: 'blog post' }
     ],
     'research': [
-      { url: 'https://www.gavinrozzi.com/publication/', title: 'Research Publications', type: 'publications' }
+      { url: 'https://www.gavinrozzi.com/gavin-rozzi-publications/', title: 'Research Publications', type: 'publications' }
     ],
     'code': [
-      { url: 'https://www.gavinrozzi.com/tag/r/', title: 'R Programming', type: 'tag' },
-      { url: 'https://www.gavinrozzi.com/tag/open-source-software/', title: 'Open Source Software', type: 'tag' }
+      { url: 'https://www.gavinrozzi.com/r-packages/', title: 'R Packages', type: 'page' },
+      { url: 'https://www.gavinrozzi.com/gavin-rozzi-open-source/', title: 'Open Source Work', type: 'page' }
+    ],
+    'speaking': [
+      { url: 'https://www.gavinrozzi.com/speaking/', title: 'Speaking Engagements', type: 'page' },
+      { url: 'https://www.gavinrozzi.com/media/', title: 'Media Appearances', type: 'page' }
+    ],
+    'contact': [
+      { url: 'https://www.gavinrozzi.com/contact/', title: 'Contact', type: 'page' }
+    ],
+    'about': [
+      { url: 'https://www.gavinrozzi.com/about/', title: 'About Gavin Rozzi', type: 'page' },
+      { url: 'https://www.gavinrozzi.com/who-is-gavin-rozzi/', title: 'Who is Gavin Rozzi?', type: 'page' }
     ]
   };
   

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Mail } from 'lucide-react';
+import { Home, Mail, Briefcase } from 'lucide-react';
 
 interface CallToActionProps {
   darkMode?: boolean;
@@ -14,6 +14,14 @@ const CallToAction: React.FC<CallToActionProps> = ({ darkMode = false }) => {
       >
         <Home className="w-5 h-5 mr-3" />
         Visit My Website
+      </a>
+
+      <a
+        href="https://www.gavinrozzi.com/portfolio/"
+        className={`inline-flex items-center justify-center px-6 py-4 border ${darkMode ? 'border-zinc-600 text-teal-300 bg-zinc-800 hover:bg-zinc-700' : 'border-teal-300 text-teal-600 bg-white hover:bg-teal-50'} text-base font-medium rounded-lg transition-colors shadow-sm`}
+      >
+        <Briefcase className="w-5 h-5 mr-3" />
+        View My Work
       </a>
 
       <a
