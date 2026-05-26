@@ -24,7 +24,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ darkMode = false }) => {
         </p>
 
         <p className={`${darkMode ? 'text-zinc-300' : 'text-zinc-700'} leading-relaxed mt-4`}>
-          I created <a href="https://www.gavinrozzi.com/portfolio/opramachine/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>OPRAmachine</a>, New Jersey's first automated public records platform, and <a href="https://www.gavinrozzi.com/portfolio/zipcoder/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>zipcodeR</a>, an R package for spatial analysis that's been cited over 53 times in academic research. I also serve on the board of the <a href="https://njfog.org/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>NJ Foundation for Open Government</a>.
+          I created <a href="https://www.gavinrozzi.com/portfolio/opramachine/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>OPRAmachine</a>, New Jersey's first automated public records platform — which has processed 75,000+ public records requests and released 250GB of government data — and <a href="https://www.gavinrozzi.com/portfolio/zipcoder/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>zipcodeR</a>, an R package with 115,000+ total downloads cited in 53+ peer-reviewed publications. I also serve on the board of the <a href="https://njfog.org/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>NJ Foundation for Open Government</a>.
         </p>
 
         <p className={`${darkMode ? 'text-zinc-300' : 'text-zinc-700'} leading-relaxed mt-4`}>
@@ -36,15 +36,19 @@ const AboutMe: React.FC<AboutMeProps> = ({ darkMode = false }) => {
           <ul className="space-y-2">
             <li className="flex items-start">
               <Award className={`w-5 h-5 ${darkMode ? 'text-teal-400' : 'text-teal-500'} mr-2 mt-0.5 flex-shrink-0`} />
-              <span className={darkMode ? 'text-zinc-300' : undefined}>Build data infrastructure for government housing programs</span>
+              <span className={darkMode ? 'text-zinc-300' : undefined}>Build data infrastructure for government housing programs — <a href="https://www.gavinrozzi.com/work-with-me/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>work with me</a></span>
             </li>
             <li className="flex items-start">
               <Award className={`w-5 h-5 ${darkMode ? 'text-teal-400' : 'text-teal-500'} mr-2 mt-0.5 flex-shrink-0`} />
-              <span className={darkMode ? 'text-zinc-300' : undefined}>Create open-source tools for data analysis and civic technology</span>
+              <span className={darkMode ? 'text-zinc-300' : undefined}>Create open-source tools for data analysis and civic technology — <a href="https://www.gavinrozzi.com/gavin-rozzi-speaker/" target="_blank" rel="noopener noreferrer" className={`${darkMode ? 'text-orange-400 hover:text-orange-300' : 'text-orange-600 hover:text-orange-500'} underline`}>book me to speak</a></span>
             </li>
             <li className="flex items-start">
               <Award className={`w-5 h-5 ${darkMode ? 'text-teal-400' : 'text-teal-500'} mr-2 mt-0.5 flex-shrink-0`} />
               <span className={darkMode ? 'text-zinc-300' : undefined}>Advance government transparency as an NJFOG board member</span>
+            </li>
+            <li className="flex items-start">
+              <Award className={`w-5 h-5 ${darkMode ? 'text-teal-400' : 'text-teal-500'} mr-2 mt-0.5 flex-shrink-0`} />
+              <span className={darkMode ? 'text-zinc-300' : undefined}>2025 Governor's Team of Excellence Award recipient (NJ Civil Service Commission)</span>
             </li>
           </ul>
         </div>

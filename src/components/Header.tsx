@@ -85,6 +85,17 @@ const Header: React.FC<HeaderProps> = ({ darkMode = false }) => {
             <span className="mr-2">Visit gavinrozzi.com</span>
             <ExternalLink className="w-4 h-4" />
           </a>
+
+          <a
+            href="https://www.gavinrozzi.com/who-is-gavin-rozzi/"
+            className="inline-flex items-center justify-center px-5 py-2 bg-white/15 hover:bg-white/25 text-white rounded-full backdrop-blur-sm transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read Gavin Rozzi's full biography"
+          >
+            Full Biography
+            <ExternalLink className="w-4 h-4 ml-2" />
+          </a>
           
           <button
             onClick={() => scrollToSection('social-links')}
