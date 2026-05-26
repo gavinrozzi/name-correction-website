@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode = false }) => {
                 className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-white text-zinc-800 text-sm px-3 py-2 rounded shadow-lg w-max max-w-xs z-10 pointer-events-none"
                 role="tooltip"
               >
-                Pronounced: <strong>RAH-zee</strong> (not ROH-see)
+                Pronounced: <strong>ROZ-zee</strong> (not ROH-see)
                 <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 border-8 border-transparent border-b-white"></div>
               </div>
             )}

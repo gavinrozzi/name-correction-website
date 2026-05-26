@@ -21,9 +21,9 @@ function App() {
 
   // Pronunciation guide data
   const pronunciationGuide = [
-    { incorrect: "ROH-zee", correct: "RAH-zee" },
-    { incorrect: "ROSS-ee", correct: "RAH-zee" },
-    { incorrect: "ROH-see", correct: "RAH-zee" }
+    { incorrect: "ROH-zee", correct: "ROZ-zee" },
+    { incorrect: "ROSS-ee", correct: "ROZ-zee" },
+    { incorrect: "ROH-see", correct: "ROZ-zee" }
   ];
 
   // Dark mode state - default to dark mode

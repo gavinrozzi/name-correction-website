@@ -40,7 +40,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         "name": "How do you pronounce Rozzi?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Rozzi is pronounced RAH-zee, rhyming with 'paparazzi.' Common mispronunciations include ROH-zee and ROSS-ee, but the correct pronunciation emphasizes the 'AH' sound."
+          "text": "Rozzi is pronounced ROZ-zee, rhyming with 'paparazzi.' Common mispronunciations include ROH-zee and ROSS-ee, but the correct pronunciation matches the double-Z in the spelling."
         }
       },
       {

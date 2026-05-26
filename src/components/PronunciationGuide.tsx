@@ -31,7 +31,7 @@ const PronunciationGuide: React.FC<PronunciationGuideProps> = ({ pronunciationGu
       <div className={`${darkMode ? 'bg-zinc-800 border-zinc-700' : 'bg-white border-orange-100'} p-5 rounded-lg border mb-6`}>
         <div className="flex items-center justify-center mb-3">
           <Volume2 className={`w-5 h-5 ${darkMode ? 'text-orange-400' : 'text-orange-500'} mr-2`} />
-          <span className={`${darkMode ? 'text-zinc-100' : 'text-zinc-800'} font-bold text-xl`}>RAH-zee</span>
+          <span className={`${darkMode ? 'text-zinc-100' : 'text-zinc-800'} font-bold text-xl`}>ROZ-zee</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
@@ -80,7 +80,7 @@ const PronunciationGuide: React.FC<PronunciationGuideProps> = ({ pronunciationGu
           <div className={`${darkMode ? 'text-orange-300' : 'text-orange-600'} font-bold text-xl`}>≠</div>
 
           <div className={`${darkMode ? 'bg-zinc-800 border-green-900' : 'bg-white border-green-200'} px-5 py-3 rounded-lg border text-center flex-1`}>
-            <p className={`${darkMode ? 'text-green-300' : 'text-green-600'} font-medium text-lg mb-1`}>RAH-zee</p>
+            <p className={`${darkMode ? 'text-green-300' : 'text-green-600'} font-medium text-lg mb-1`}>ROZ-zee</p>
             <p className={darkMode ? 'text-zinc-300' : 'text-zinc-700'}>Like in "father" + "zebra"</p>
           </div>
         </div>
