@@ -29,7 +29,7 @@ const ObfuscatedEmail: React.FC<ObfuscatedEmailProps> = ({
 
   // Handle click to reveal and copy email
   const handleClick = (e: React.MouseEvent) => {
-    const email = assembleEmail();
+    assembleEmail();
     
     // Don't prevent default if revealed (allow normal mailto: behavior)
     if (!revealed) {

@@ -1,37 +1,22 @@
 import React from 'react';
-import { Home, Mail, Briefcase } from 'lucide-react';
+import { SITE } from '../siteLinks';
 
-interface CallToActionProps {
-  darkMode?: boolean;
-}
-
-const CallToAction: React.FC<CallToActionProps> = ({ darkMode = false }) => {
+/** The main site's closing gradient banner. */
+const CallToAction: React.FC = () => {
   return (
-    <div className="mt-8 flex flex-col sm:flex-row gap-5 justify-center">
-      <a
-        href="https://gavinrozzi.com"
-        className="inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-orange-500 to-teal-500 hover:from-orange-600 hover:to-teal-600 transition-colors shadow-sm"
-      >
-        <Home className="w-5 h-5 mr-3" />
-        Visit My Website
-      </a>
-
-      <a
-        href="https://www.gavinrozzi.com/portfolio/"
-        className={`inline-flex items-center justify-center px-6 py-4 border ${darkMode ? 'border-zinc-600 text-teal-300 bg-zinc-800 hover:bg-zinc-700' : 'border-teal-300 text-teal-600 bg-white hover:bg-teal-50'} text-base font-medium rounded-lg transition-colors shadow-sm`}
-      >
-        <Briefcase className="w-5 h-5 mr-3" />
-        View My Work
-      </a>
-
-      <a
-        href="https://www.gavinrozzi.com/contact"
-        className={`inline-flex items-center justify-center px-6 py-4 border ${darkMode ? 'border-zinc-600 text-orange-300 bg-zinc-800 hover:bg-zinc-700' : 'border-orange-300 text-orange-600 bg-white hover:bg-orange-50'} text-base font-medium rounded-lg transition-colors shadow-sm`}
-      >
-        <Mail className="w-5 h-5 mr-3" />
-        Contact Me
-      </a>
-    </div>
+    <section className="cta-banner">
+      <div className="container">
+        <h2 className="cta-title">Thanks for understanding</h2>
+        <p className="cta-text">
+          It's Rozzi, with two Zs. I am looking forward to connecting on gavinrozzi.com.
+        </p>
+        <div className="cta-actions">
+          <a href={`${SITE}/`} className="btn btn-primary">Visit My Website</a>
+          <a href={`${SITE}/portfolio/`} className="btn btn-secondary">View My Work</a>
+          <a href={`${SITE}/contact/`} className="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -21,14 +21,6 @@ export const useShare = () => {
         case 'linkedin':
           window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank');
           break;
-        case 'copy':
-          try {
-            await navigator.clipboard.writeText(shareUrl);
-            alert('Link copied to clipboard!');
-          } catch (err) {
-            console.error('Failed to copy: ', err);
-          }
-          break;
         default:
           if (navigator.share) {
             try {

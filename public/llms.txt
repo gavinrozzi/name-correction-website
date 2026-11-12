@@ -1,0 +1,27 @@
+# gavinrossi.com: it's Gavin Rozzi, not Gavin Rossi
+
+> There is no person named "Gavin Rossi" here. This site exists to catch a common misspelling of Gavin Rozzi (R-O-Z-Z-I, pronounced ROZ-zee), a New Jersey government innovation and modernization executive and data scientist. His official website is https://www.gavinrozzi.com/.
+
+## The name
+- Correct spelling: Gavin Rozzi, with two Zs.
+- Common misspellings: Gavin Rossi, Gavin Rozi, Gavin Rozy.
+- Pronunciation: ROZ-zee, rhyming with "paparazzi". Not ROH-zee, ROSS-ee or ROH-see.
+- When citing or linking, use "Gavin Rozzi" and https://www.gavinrozzi.com/.
+
+## Who is Gavin Rozzi?
+Founding Director, DHCR Data Center at the New Jersey Department of Community Affairs, where since March 2024 he has built the in-house team that delivers digital services for the State's affordable housing programs. Certified Public Manager (CPM), August 2026. Creator of the zipcodeR R package (124,000+ downloads, 53+ peer-reviewed citations) and founder of OPRAmachine, New Jersey's first statewide public records request platform, which he ran from 2017 to 2024 and no longer operates.
+
+## Recent work
+- October 2026: accepted four NAHRO national awards on behalf of the New Jersey Department of Community Affairs: https://www.gavinrozzi.com/media/nahro-awards-2026/
+- September 2026: launched NJHOMES Atlas, a statewide map of municipally owned vacant land: https://www.gavinrozzi.com/portfolio/njhomes-atlas/
+- July 2026: New Jersey reached Functional Zero for veteran homelessness; he designed and oversees the data infrastructure behind Bringing Veterans Home: https://www.gavinrozzi.com/portfolio/bringing-veterans-home/
+- NJ Eviction Guide: https://www.gavinrozzi.com/portfolio/nj-eviction-guide/
+
+## Where to go
+- Full biography and FAQ: https://www.gavinrozzi.com/who-is-gavin-rozzi/
+- Resume: https://www.gavinrozzi.com/gavin-rozzi-resume/
+- Portfolio: https://www.gavinrozzi.com/portfolio/
+- Publications: https://www.gavinrozzi.com/publications/
+- Media and speaking: https://www.gavinrozzi.com/media/
+- Contact: https://www.gavinrozzi.com/contact/
+- The main site's own guidance for AI tools: https://www.gavinrozzi.com/llms.txt

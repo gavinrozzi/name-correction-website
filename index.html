@@ -1,18 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gavin Rossi? It's Gavin Rozzi, With Two Zs</title>
+    <meta name="description" content="Looking for Gavin Rossi? It's Gavin Rozzi, with two Zs: New Jersey government innovation and modernization executive and data scientist. Correct spelling, pronunciation and where to find his work." />
+    <meta name="author" content="Gavin Rozzi" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://gavinrossi.com/" />
+    <link rel="me" href="https://www.gavinrozzi.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gavin Rozzi" />
+    <meta property="og:title" content="Not Gavin Rossi. It's Gavin Rozzi." />
+    <meta property="og:description" content="My last name is spelled with two Zs and pronounced ROZ-zee. Find my work at gavinrozzi.com." />
+    <meta property="og:url" content="https://gavinrossi.com/" />
+    <meta property="og:image" content="https://gavinrossi.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Oops! Did you mean Gavin Rozzi? My last name is spelled with two Zs." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gavroz" />
+    <meta name="twitter:creator" content="@gavroz" />
+    <meta name="twitter:title" content="Not Gavin Rossi. It's Gavin Rozzi." />
+    <meta name="twitter:description" content="My last name is spelled with two Zs and pronounced ROZ-zee. Find my work at gavinrozzi.com." />
+    <meta name="twitter:image" content="https://gavinrossi.com/og-image.png" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gavin Rozzi - Name Clarification</title>
-    <meta name="description" content="There is no person named 'Gavin Rossi' - my last name is spelled with two Zs. This page exists to clarify the common misspelling of Gavin Rozzi's name.">
-    <meta name="keywords" content="Gavin Rozzi, Gavin Rossi, name spelling, name correction">
-    <!-- Preload critical assets -->
     <link rel="preload" href="/images/profile.jpg" as="image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://gavinrozzi.com" />
+    <link rel="dns-prefetch" href="https://www.gavinrozzi.com/" />
+
+    <!-- Set the theme before first paint (dark unless the visitor chose light). -->
+    <script>
+      try {
+        var light = localStorage.getItem('darkMode') === 'false';
+        document.documentElement.dataset.theme = light ? 'light' : 'dark';
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
