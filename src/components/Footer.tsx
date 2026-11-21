@@ -51,7 +51,13 @@ const Footer: React.FC = () => {
           </nav>
         </div>
 
-        <p className="footer-bottom">© {new Date().getFullYear()} Gavin Rozzi. All rights reserved.</p>
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} Gavin Rozzi. All rights reserved.</p>
+          {/* Same wording as the main site's footer (grwebsite: src/components/Footer.astro). */}
+          <p className="footer-disclaimer">
+            This personal website is maintained in my individual capacity. All views expressed are my own and do not represent my employer, the Florence Township Board of Education, or any board or organization with which I am affiliated. No state time or resources were used.
+          </p>
+        </div>
       </div>
     </footer>
   );

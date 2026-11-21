@@ -28,11 +28,11 @@ const Hero: React.FC = () => {
           <div className="hero-image">
             <div className="headshot-frame">
               <img
-                src="/images/profile.jpg"
+                src="/images/gavin-rozzi-headshot.jpg"
                 alt="Professional headshot of Gavin Rozzi"
                 className="headshot"
-                width={320}
-                height={320}
+                width={360}
+                height={360}
                 loading="eager"
               />
             </div>
